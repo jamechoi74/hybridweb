@@ -3,21 +3,18 @@
 
 -----
 ## 웹에서 아이폰 안드로이드 구분 함수
-```
-# hybridweb
-## 1. 아이폰 / 안드로이드 구분 함수
->>>>>>> 5cbf7acbfd9bbe93c0aede5bccc9553ec5f1ba91
-function checkMobile() {
-    var result = "web";
-    var varUA = navigator.userAgent.toLowerCase(); //userAgent 값 얻기
-    if ( varUA.indexOf('android') > -1) {
-        result = "android";
-    } else if ( varUA.indexOf("iphone") > -1||varUA.indexOf("ipad") > -1||varUA.indexOf("ipod") > -1 ) {
-        result = "ios";
-    } 
-    return result;
-}
-```
+    ```
+    function checkMobile() {
+        var result = "web";
+        var varUA = navigator.userAgent.toLowerCase(); //userAgent 값 얻기
+        if ( varUA.indexOf('android') > -1) {
+            result = "android";
+        } else if ( varUA.indexOf("iphone") > -1||varUA.indexOf("ipad") > -1||varUA.indexOf("ipod") > -1 ) {
+            result = "ios";
+        } 
+        return result;
+    }
+    ```
 
 ## 1. 파이어베이스 푸시키 가져오기
 * 호출
@@ -115,8 +112,4 @@ function hybridWebApp_rcvHandler(rcvMessage) {
     }
 }
 ```
-=======
-    document.getElementById("deviceType").innerText = result;
-    return result;
-}
->>>>>>> 5cbf7acbfd9bbe93c0aede5bccc9553ec5f1ba91
+
