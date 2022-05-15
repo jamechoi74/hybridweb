@@ -18,8 +18,8 @@ function checkMobile() {
 
 ## 1. 파이어베이스 푸시키 가져오기
 * 호출
-    ### [Android]   window.HybridWebApp.callApp_GetFBToken();
-    ### [IOS]       window.webkit.messageHandlers.callApp_GetFBToken.postMessage({});
+    * [Android]   window.HybridWebApp.callApp_GetFBToken();
+    * [IOS]       window.webkit.messageHandlers.callApp_GetFBToken.postMessage({});
 * 응답
     > rcvMessage.data.token : 단말에 설정된 파이어베이스 토큰 키
     ```
@@ -43,8 +43,8 @@ function checkMobile() {
 
 ## 2. 초기 접속 주소 가져오기
 * 호출
-    ### [Android]   window.HybridWebApp.callApp_GetInitUrl();
-    ### [IOS]       window.webkit.messageHandlers.callApp_GetInitUrl.postMessage({});
+    * [Android]   window.HybridWebApp.callApp_GetInitUrl();
+    * [IOS]       window.webkit.messageHandlers.callApp_GetInitUrl.postMessage({});
 * 응답
     >  rcvMessage.data.initUrl : 단말에 설정된 초기접속 주소
 ```
@@ -71,12 +71,12 @@ function hybridWebApp_rcvHandler(rcvMessage) {
     > initUrl : http/https를 포함한 full url 주소
 
     > isRedirect : 주소로 바로 이동 여부 (true/false)
-    ### [Android]   
+    * [Android]   
         window.HybridWebApp.callApp_SetInitUrl(JSON.stringify({
             'initUrl' : document.getElementById("initUrl").value,   
             'isRedirect' : false
         }));
-    ### [IOS]       
+    * [IOS]       
         window.webkit.messageHandlers.callApp_SetInitUrl.postMessage({
             'initUrl' : document.getElementById("initUrl").value,
             'isRedirect' : false
@@ -88,8 +88,8 @@ function hybridWebApp_rcvHandler(rcvMessage) {
 
 ## 4. 현위치 정보 가져오기
 * 호출
-    ### [Android]   window.HybridWebApp.callApp_CurrentGPS();
-    ### [IOS]       window.webkit.messageHandlers.callApp_CurrentGPS.postMessage({});
+    * [Android]   window.HybridWebApp.callApp_CurrentGPS();
+    * [IOS]       window.webkit.messageHandlers.callApp_CurrentGPS.postMessage({});
 * 응답
     > rcvMessage.data.longitude : 현재 위치 경도(WGS84)
 
