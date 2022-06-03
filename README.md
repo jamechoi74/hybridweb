@@ -113,3 +113,14 @@ function hybridWebApp_rcvHandler(rcvMessage) {
 }
 ```
 
+## 5. 팝업 연동
+* 공통
+ : 사이즈 변수는 0~100%의 비율 변수 (widthRate,heightRate)
+* 호출
+    * [Android]   
+        * window.HybridWebApp.callApp_PopupSize(int widthRate, int heightRate);
+        * window.open("popup", "popupWindow", "resizable=yes");
+
+    * [IOS]   
+        * window.open("popup", "popupWindow", "width=80, height=50, resizable=yes");
+        * 상기 width가 widthRate이고, height가 heightRate임. 즉, 화면 크기 비율
